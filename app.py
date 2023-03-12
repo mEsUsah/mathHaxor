@@ -24,8 +24,8 @@ else:
     showAnswer = False
 
 
-def generateNumber(sipher):
-    return random.randint(10**(sipher-1), (10**(sipher))-1)
+def generateNumber(siphers):
+    return random.randint(10**(siphers-1), (10**(siphers))-1)
 
 def printAddition(firstNumber, secondNumber, showAnswer):
     if(showAnswer):
