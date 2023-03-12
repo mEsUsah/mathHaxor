@@ -17,6 +17,7 @@ nProblems = int(input('How many problems would you like to generate? '))
 firstNumberSiphers = int(input('How many siphers should the first number have? '))
 secondNumberSiphers = int(input('How many siphers should the second number have? '))
 showAnswer = input('Do you want to see the answer? (Y/n) ')
+
 if showAnswer == 'y' or showAnswer == 'Y' or showAnswer == '':
     showAnswer = True
 else:
@@ -25,6 +26,12 @@ else:
 
 def generateNumber(sipher):
     return random.randint(10**(sipher-1), (10**(sipher))-1)
+
+def printAddition(firstNumber, secondNumber, showAnswer):
+    if(showAnswer):
+        print('# ',firstNumber, '+', secondNumber, '\t=', firstNumber + secondNumber)
+    else:
+        print('# ',firstNumber, '+', secondNumber)
 
 # Generate problems
 print('')
@@ -36,11 +43,7 @@ print('#')
 for i in range(0, nProblems):
     firstNumber = generateNumber(firstNumberSiphers)
     secondNumber = generateNumber(secondNumberSiphers)
-    
-    if(showAnswer):
-        print('# ',firstNumber, '+', secondNumber, '\t=', firstNumber + secondNumber)
-    else:
-        print('# ',firstNumber, '+', secondNumber)
+    printAddition(firstNumber, secondNumber, showAnswer)
 
 print('#')
 print('#'*80)
