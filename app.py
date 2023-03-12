@@ -13,7 +13,7 @@ print('#')
 print('#'*80)
 
 # Ask for user input
-nProblems = int(input('How many problems would you like to generate? '))
+nProblems = int(input('\nHow many problems would you like to generate? '))
 firstNumberSiphers = int(input('How many siphers should the first number have? '))
 secondNumberSiphers = int(input('How many siphers should the second number have? '))
 showAnswer = input('Do you want to see the answer? (Y/n) ')
@@ -37,7 +37,9 @@ def printAddition(firstNumber, secondNumber, showAnswer):
 print('')
 print('#'*80)
 print('#')
-print('#  Problem set:')
+print('#  Problem set with addition:')
+print('#')
+print('#'*80)
 print('#')
 
 for i in range(0, nProblems):
