@@ -34,7 +34,7 @@ for i in range(0, nProblems):
     firstNubmer = random.randint(10**(firstNumberSiphers-1), (10**(firstNumberSiphers))-1)
     secondNumber = random.randint(10**(firstNumberSiphers-1), (10**(secondNumberSiphers))-1)
     if(showAnswer):
-        print('# ',firstNubmer, '+', secondNumber, '=', firstNubmer + secondNumber)
+        print('# ',firstNubmer, '+', secondNumber, '\t=', firstNubmer + secondNumber)
     else:
         print('# ',firstNubmer, '+', secondNumber)
 
