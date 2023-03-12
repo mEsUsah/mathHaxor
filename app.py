@@ -22,21 +22,25 @@ if showAnswer == 'y' or showAnswer == 'Y' or showAnswer == '':
 else:
     showAnswer = False
 
-# Generate problems
 
+def generateNumber(sipher):
+    return random.randint(10**(sipher-1), (10**(sipher))-1)
+
+# Generate problems
 print('')
 print('#'*80)
 print('#')
-print('# Problem set:')
+print('#  Problem set:')
 print('#')
 
 for i in range(0, nProblems):
-    firstNubmer = random.randint(10**(firstNumberSiphers-1), (10**(firstNumberSiphers))-1)
-    secondNumber = random.randint(10**(firstNumberSiphers-1), (10**(secondNumberSiphers))-1)
+    firstNumber = generateNumber(firstNumberSiphers)
+    secondNumber = generateNumber(secondNumberSiphers)
+    
     if(showAnswer):
-        print('# ',firstNubmer, '+', secondNumber, '\t=', firstNubmer + secondNumber)
+        print('# ',firstNumber, '+', secondNumber, '\t=', firstNumber + secondNumber)
     else:
-        print('# ',firstNubmer, '+', secondNumber)
+        print('# ',firstNumber, '+', secondNumber)
 
 print('#')
 print('#'*80)
