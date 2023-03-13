@@ -33,6 +33,12 @@ def printAddition(firstNumber, secondNumber, showAnswer):
     else:
         print('# ',firstNumber, '+', secondNumber)
 
+def randomPosition(a, b):
+    if random.randint(0, 1) == 0:
+        return a, b
+    else:
+        return b, a
+
 # Generate problems
 print('')
 print('#'*80)
@@ -45,6 +51,8 @@ print('#')
 for i in range(0, nProblems):
     firstNumber = generateNumber(firstNumberSiphers)
     secondNumber = generateNumber(secondNumberSiphers)
+    
+    firstNumber, secondNumber = randomPosition(firstNumber, secondNumber)
     printAddition(firstNumber, secondNumber, showAnswer)
 
 print('#')
