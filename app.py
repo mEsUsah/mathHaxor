@@ -14,8 +14,8 @@ print('#'*80)
 
 # Ask for user input
 nProblems = int(input('\nHow many problems would you like to generate? '))
-firstNumberSiphers = int(input('How many siphers should the first number have? '))
-secondNumberSiphers = int(input('How many siphers should the second number have? '))
+firstNumberSiphers = int(input('How many ciphers should the first number have? '))
+secondNumberSiphers = int(input('How many ciphers should the second number have? '))
 showAnswer = input('Do you want to see the answer? (Y/n) ')
 
 if showAnswer == 'y' or showAnswer == 'Y' or showAnswer == '':
