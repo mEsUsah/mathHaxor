@@ -1,9 +1,10 @@
 #! /usr/bin/env python
 
 # import modules
-from cli import *
+import cli
+import utils
 
-output.welcomeSplash()
+cli.output.welcomeSplash()
 
 # Ask for user input
 nProblems = int(input('\nHow many problems would you like to generate? '))
@@ -32,10 +33,10 @@ print('#'*80)
 print('#')
 
 for i in range(0, nProblems):
-    firstNumber = utils.generateNumber(firstNumberSiphers)
-    secondNumber = utils.generateNumber(secondNumberSiphers)
+    firstNumber = utils.general.generateNumber(firstNumberSiphers)
+    secondNumber = utils.general.generateNumber(secondNumberSiphers)
     
-    firstNumber, secondNumber = utils.randomPosition(firstNumber, secondNumber)
+    firstNumber, secondNumber = utils.general.randomPosition(firstNumber, secondNumber)
     printAddition(firstNumber, secondNumber, showAnswer)
 
 print('#')
