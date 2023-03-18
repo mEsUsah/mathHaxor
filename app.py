@@ -11,7 +11,7 @@ nProblems = int(input('\nHow many problems would you like to generate? '))
 firstNumberSiphers = int(input('How many ciphers should the first number have? '))
 secondNumberSiphers = int(input('How many ciphers should the second number have? '))
 
-problemTypes = ['Addition', 'Subtraction']
+problemTypes = ['Addition', 'Subtraction','Multiplication']
 problemSelected = False
 
 print('What kind of problem do you want to generate?')
@@ -44,6 +44,8 @@ for i in range(0, nProblems):
             problem = utils.math_problems.additionProblem(firstNumber, secondNumber)
         case 1:
             problem = utils.math_problems.subtractionProblem(firstNumber, secondNumber)
+        case 2:
+            problem = utils.math_problems.multiplicationProblem(firstNumber, secondNumber)
         case _: # Default
             problem = utils.math_problems.additionProblem(firstNumber, secondNumber)
 
