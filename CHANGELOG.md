@@ -6,7 +6,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.1.2] - 2023.03.18
 Create and refactor math problems into classes.
 ### added
-- Added classes to manage math problems
+- Classes to manage math problems
+- Subraction problem
+- Problem selector
 
 ## [0.1.1] - 2023.03.16
 Refator cli and util functionality into packages
