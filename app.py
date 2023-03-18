@@ -17,12 +17,6 @@ if showAnswer == 'y' or showAnswer == 'Y' or showAnswer == '':
 else:
     showAnswer = False
 
-def printAddition(firstNumber, secondNumber, showAnswer):
-    if(showAnswer):
-        print('# ',firstNumber, '+', secondNumber, '\t=', firstNumber + secondNumber)
-    else:
-        print('# ',firstNumber, '+', secondNumber)
-
 # Generate problems
 print('')
 print('#'*80)
@@ -37,7 +31,13 @@ for i in range(0, nProblems):
     secondNumber = utils.general.generateNumber(secondNumberSiphers)
     
     firstNumber, secondNumber = utils.general.randomPosition(firstNumber, secondNumber)
-    printAddition(firstNumber, secondNumber, showAnswer)
+    problem = utils.math_problems.additionProblem(firstNumber, secondNumber)
+    
+    print ('#  ', problem.getProblem(), end='')
+    if showAnswer:
+        print(' = ', problem.getSolution(), end="\n")
+    else:
+        print()
 
 print('#')
 print('#'*80)

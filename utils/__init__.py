@@ -1,3 +1,4 @@
-__all__ = ['general']
+__all__ = ['general', 'math_problems']
 
 from .general import *
+from .math_problems import *
