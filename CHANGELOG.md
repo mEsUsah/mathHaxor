@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 Create and refactor math problems into classes.
 ### added
 - Classes to manage math problems
-- Subraction problem
+- Subtraction problem
 - Multiplication problem
 - Division problem
 - Problem selector
