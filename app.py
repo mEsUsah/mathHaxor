@@ -32,7 +32,6 @@ else:
 # Generate problems
 problems = []
 for i in range(0, nProblems):
-    
     match problemSelected:
         case 0:
             problem = utils.math_problems.additionProblem(firstNumberSiphers, secondNumberSiphers)
@@ -44,7 +43,11 @@ for i in range(0, nProblems):
             problem = utils.math_problems.divisionProblem(firstNumberSiphers, secondNumberSiphers, problemLvlSelected)
         case _: # Default
             problem = utils.math_problems.additionProblem(firstNumberSiphers, secondNumberSiphers)
-
     problems.append(problem)    
 
-cli.showProblems(problems, showAnswer)
+outputMethod = cli.input.list(['Text','HTML'], 'How do you want to see the problems?')
+match outputMethod:
+    case 0:
+        cli.showProblems(problems, showAnswer)
+    case 1:
+        print(utils.web_generator.WebGenerator.generateHtml(problems, showAnswer))
