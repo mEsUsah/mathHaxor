@@ -6,3 +6,22 @@ def welcomeSplash():
     print('#   This is a simple math problem generator')
     print('#')
     print('#'*80)
+
+def showProblems(problems, showAnswer):
+    print('')
+    print('#'*80)
+    print('#')
+    print('#  Problem set with addition:')
+    print('#')
+    print('#'*80)
+    print('#')
+
+    for problem in problems:
+        print ('#  ', problem.getProblem(), end='')
+        if showAnswer:
+            print(' = ', problem.getSolution(), end="\n")
+        else:
+            print()
+
+    print('#')
+    print('#'*80)

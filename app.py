@@ -38,8 +38,8 @@ if problemSelected == 3:
         if problemLvl > 0 and problemLvl <= len(problemLvls):
             problemLvlSelected = problemLvl - 1
             ask = False
-            print()
-
+            
+print()
 showAnswer = input('Do you want to see the answer? (Y/n) ')
 
 if showAnswer == 'y' or showAnswer == 'Y' or showAnswer == '':
@@ -65,21 +65,4 @@ for i in range(0, nProblems):
 
     problems.append(problem)    
 
-# Print problems
-print('')
-print('#'*80)
-print('#')
-print('#  Problem set with addition:')
-print('#')
-print('#'*80)
-print('#')
-
-for problem in problems:
-    print ('#  ', problem.getProblem(), end='')
-    if showAnswer:
-        print(' = ', problem.getSolution(), end="\n")
-    else:
-        print()
-
-print('#')
-print('#'*80)
+cli.showProblems(problems, showAnswer)
