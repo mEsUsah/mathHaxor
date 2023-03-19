@@ -1,3 +1,4 @@
-__all__ = ['output']
+__all__ = ['input','output']
 
+from .input import *
 from .output import *

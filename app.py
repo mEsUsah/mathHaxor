@@ -16,30 +16,12 @@ problemSelected = False
 problemLvls = ['Elementary', 'Middle']
 problemLvlSelected = False
 
-print('What kind of problem do you want to generate?')
-for i in range(0, len(problemTypes)):
-    print('  ', i+1, ': ', problemTypes[i], sep='')
-
-ask = True
-while ask:
-    problemType = int(input("Select a number: "))
-    if problemType > 0 and problemType <= len(problemTypes):
-        problemSelected = problemType - 1
-        ask = False
-
-if problemSelected == 3:
-    print('What difficulty?')
-    for i in range(0, len(problemLvls)):
-        print('  ', i+1, ': ', problemLvls[i], sep='')
-    
-    ask = True
-    while ask:
-        problemLvl = int(input("Select a number: "))
-        if problemLvl > 0 and problemLvl <= len(problemLvls):
-            problemLvlSelected = problemLvl - 1
-            ask = False
-            
+problemSelected = cli.input.list(problemTypes, 'What kind of problem do you want to generate?')
 print()
+if problemSelected == 3:
+    problemLvlSelected = cli.input.list(problemLvls, 'What difficulty?')
+    print()
+            
 showAnswer = input('Do you want to see the answer? (Y/n) ')
 
 if showAnswer == 'y' or showAnswer == 'Y' or showAnswer == '':
