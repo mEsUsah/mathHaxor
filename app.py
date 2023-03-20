@@ -46,6 +46,7 @@ for i in range(0, nProblems):
             problem = utils.math_problems.additionProblem(firstNumberSiphers, secondNumberSiphers)
     problems.append(problem)    
 
+# Choose output method
 outputMethod = cli.input.list(['Text to CLI','PDF (problems.pdf)'], 'How do you want to see the problems?')
 match outputMethod:
     case 0:
