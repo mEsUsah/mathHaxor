@@ -2,7 +2,10 @@
 App to generate math problems
 
 * Run as a cli/terminal tool
+* Can output to CLI or PDF
 
+## Prerequesites
+* Install [wkhtmltopdf](https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf) and add the bin directory to the PATH environement variable.
 
 ## Installation Windows
 ```cmd
