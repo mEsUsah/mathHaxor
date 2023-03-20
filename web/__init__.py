@@ -1,3 +1,4 @@
-__all__=['generator']
+__all__=['generator','resources']
 
 from .generator import *
+from .resources import *

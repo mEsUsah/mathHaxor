@@ -52,4 +52,5 @@ match outputMethod:
         cli.showProblems(problems, showAnswer)
     case 1:
         html=web.generator.problemsHtml(problems, showAnswer)
-        utils.pdf.create(html, 'problems.pdf')
+        css=web.resources.problemsCssFile()
+        utils.pdf.create(html, css, 'problems.pdf')

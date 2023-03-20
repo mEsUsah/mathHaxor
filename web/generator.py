@@ -7,5 +7,4 @@ def problemsHtml(problems, showAnswer):
     )
 
     template = env.get_template('problemPrint.html')
-
     return template.render(problems=problems, showAnswer=showAnswer)
