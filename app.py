@@ -50,4 +50,5 @@ match outputMethod:
     case 0:
         cli.showProblems(problems, showAnswer)
     case 1:
-        print(utils.web_generator.WebGenerator.generateHtml(problems, showAnswer))
+        html=utils.web_generator.WebGenerator.generateHtml(problems, showAnswer)
+        utils.pdf.create(html, 'problems.pdf')
