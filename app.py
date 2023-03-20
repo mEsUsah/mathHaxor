@@ -55,3 +55,6 @@ match outputMethod:
         html=web.generator.problemsHtml(problems, showAnswer)
         css=web.resources.problemsCssFile()
         utils.pdf.create(html, css, 'problems.pdf')
+
+# End of program
+cli.output.goodbyeSplash()
