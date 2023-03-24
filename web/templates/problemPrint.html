@@ -11,7 +11,7 @@
         <li>
             {{ problem.getProblem() }}
             {% if showAnswer %}
-                - {{ problem.getSolution() }}
+                = {{ problem.getSolution() }}
             {% endif %}
         </li>
     {% endfor %}
