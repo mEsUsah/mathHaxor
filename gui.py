@@ -75,7 +75,24 @@ for i in range(1, 5):
     ).pack(side="top", fill="x", padx=10)
 elmAddValue2.set(1)
 
-elmAddButton = ttk.Button(elmAddTab, text="Generate Problems")
+
+def generateElmAdditionProblems():
+    problems = []
+    for i in range(0, 20):
+        problem = utils.math_problems.additionProblem(elmAddValue1.get(), elmAddValue2.get())
+        problems.append(problem)
+    
+    showSolution = True
+    html=web.generator.problemsHtml(problems, showSolution)
+    css=web.resources.problemsCssFile()
+    utils.pdf.create(html, css, 'problems.pdf')
+
+
+elmAddButton = ttk.Button(
+    elmAddTab, 
+    text="Generate Problems",
+    command=generateElmAdditionProblems
+)
 elmAddButton.pack(side="top", fill="x", padx=10, pady=10)
 
 
