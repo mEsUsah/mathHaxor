@@ -1,8 +1,7 @@
 # import modules
-import cli
 import utils
 import web
-import os
+import gui
 import tkinter as tk                    
 from tkinter import ttk
 
@@ -10,12 +9,7 @@ window = tk.Tk()
 window.title("Math Haxor")
 window.geometry("-100+100")
 window.resizable(False, False)
-
-### Icon
-dirName=os.path.dirname(__file__)
-absolutPath=os.path.join(dirName,'favicon.png')
-photo = tk.PhotoImage(file = absolutPath)
-window.wm_iconphoto(False, photo)
+gui.icon.setIcon(window)
 
 mainTabControl = ttk.Notebook(window)
 elementraySchoolTab = ttk.Frame(mainTabControl)

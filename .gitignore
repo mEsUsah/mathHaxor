@@ -1,5 +1,7 @@
 cli/__pycache__
 utils/__pycache__
 web/__pycache__
+gui/__pycache__
+gui/elementary/__pycache__
 venv
 problems.pdf
