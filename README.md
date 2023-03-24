@@ -22,7 +22,7 @@ python3 gui.py
 ```
 
 
-## Interractive terminal tool usage
+## Interactive terminal tool
 ```bash
 python3 cli.py
 ```
