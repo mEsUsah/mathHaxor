@@ -1,3 +1,4 @@
-__all__ = ['addition']
+__all__ = ['addition','Tab']
 
 from .addition import *
+from .Tab import Tab
