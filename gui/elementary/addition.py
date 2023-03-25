@@ -41,15 +41,19 @@ class Tab():
                 value=i
             ).pack(side="top", fill="x", padx=10)
 
-        elmAddButton = ttk.Button(
-            self.tab, 
-            text="Generate Problems",
-            command=self.generateElmAdditionProblems
+        createButton = ttk.Button(
+            tab, 
+            text="Create PDF", 
+            command=self.generatePDF
         )
-        elmAddButton.pack(side="top", fill="x", padx=10, pady=10)
+        createButton.pack(side="top", fill="x", padx=10, pady=10)
 
 
-    def generateElmAdditionProblems(self):
+    def generatePDF(self):
+        filePath = utils.pdf.guiSaveAsPath()
+        if not filePath:
+            return # User canceled the save dialog
+        
         problems = []
         for i in range(0, 20):
             problem = utils.math_problems.additionProblem(self.firstNumber.get(), self.secondNumber.get())
@@ -58,5 +62,5 @@ class Tab():
         showSolution = True
         html=web.generator.problemsHtml(problems, showSolution)
         css=web.resources.problemsCssFile()
-        utils.pdf.create(html, css, 'problems.pdf')
+        utils.pdf.create(html, css, filePath)
 
