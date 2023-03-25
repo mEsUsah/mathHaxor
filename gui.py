@@ -28,5 +28,13 @@ gui.elementary.Tab(elementraySchoolTab)
 tab_2_content = ttk.Frame(randomTab)
 tab_2_content.pack(expand=1, fill="both")
 
+# Credits
+bottomFrame = ttk.Frame(window)
+bottomFrame.pack(side="bottom", fill="x")
+versionLabel = ttk.Label(bottomFrame, text="v0.5.5")
+versionLabel.pack(side="right", fill="x", padx=10, pady=10)
+
+creditsLabel = ttk.Label(bottomFrame, text="Created by Stanley Skarshaug - www.haxor.no")
+creditsLabel.pack(side="left", fill="x", padx=10, pady=10)
 
 window.mainloop()

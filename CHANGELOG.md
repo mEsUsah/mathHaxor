@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.5.1] - 2023.03.25
 ### Added
 - Project naming convention
+- Credits, and version number in bottom of GUI window
 
 ### Fixes
 - Refactor icon
