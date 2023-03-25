@@ -4,7 +4,7 @@ import web
 import utils
 
 
-class Gui():
+class Tab():
     def __init__(self, tab):
         self.tab = tab
         self.firstNumber = tk.IntVar(value=1)

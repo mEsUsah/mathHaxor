@@ -30,4 +30,4 @@ class Tab():
         elmTabControl.add(elmDivTab, text ='Division')
 
         # Elementary Addition Tab
-        gui.elementary.addition.Gui(elmAddTab)
+        gui.elementary.addition.Tab(elmAddTab)
