@@ -4,57 +4,59 @@ import web
 import utils
 
 
-def gui(tab):
-    elmAddProblemContainer = ttk.Frame(tab)
-    elmAddProblemContainer.pack(side="top", expand=1, fill="both")
+class Gui():
+    def __init__(self, tab):
+        self.tab = tab
+        self.firstNumber = tk.IntVar(value=1)
+        self.secondNumber = tk.IntVar(value=1)
 
-    elmAddTabContent1 = ttk.Frame(elmAddProblemContainer)
-    elmAddTabContent1.pack(side="left", fill="both")
+        elmAddProblemContainer = ttk.Frame(self.tab)
+        elmAddProblemContainer.pack(side="top", expand=1, fill="both")
 
-    elmAddLabel1 = ttk.Label(elmAddTabContent1,text="Ciphers in the first number:")
-    elmAddLabel1.pack(side="top", fill="x", padx=10, pady=6)
+        elmAddTabContent1 = ttk.Frame(elmAddProblemContainer)
+        elmAddTabContent1.pack(side="left", fill="both")
 
-    elmAddValue1 = tk.IntVar()
-    for i in range(1, 5):
-        ttk.Radiobutton(
-            elmAddTabContent1,
-            text=str(i),
-            variable=elmAddValue1,
-            value=i
-        ).pack(side="top", fill="x", padx=10)
-    elmAddValue1.set(1)
+        elmAddLabel1 = ttk.Label(elmAddTabContent1,text="Ciphers in the first number:")
+        elmAddLabel1.pack(side="top", fill="x", padx=10, pady=6)
 
-    elmAddTabContent2 = ttk.Frame(elmAddProblemContainer)
-    elmAddTabContent2.pack(side="left", fill="both")
+        for i in range(1, 5):
+            ttk.Radiobutton(
+                elmAddTabContent1,
+                text=str(i),
+                variable=self.firstNumber,
+                value=i
+            ).pack(side="top", fill="x", padx=10)
 
-    elmAddLabel2 = ttk.Label(elmAddTabContent2,text="Ciphers in the second number:")
-    elmAddLabel2.pack(side="top", fill="x", padx=10, pady=6)
+        elmAddTabContent2 = ttk.Frame(elmAddProblemContainer)
+        elmAddTabContent2.pack(side="left", fill="both")
 
-    elmAddValue2 = tk.IntVar()
-    for i in range(1, 5):
-        ttk.Radiobutton(
-            elmAddTabContent2,
-            text=str(i),
-            variable=elmAddValue2,
-            value=i
-        ).pack(side="top", fill="x", padx=10)
-    elmAddValue2.set(1)
+        elmAddLabel2 = ttk.Label(elmAddTabContent2,text="Ciphers in the second number:")
+        elmAddLabel2.pack(side="top", fill="x", padx=10, pady=6)
 
-    def generateElmAdditionProblems():
+        for i in range(1, 5):
+            ttk.Radiobutton(
+                elmAddTabContent2,
+                text=str(i),
+                variable=self.secondNumber,
+                value=i
+            ).pack(side="top", fill="x", padx=10)
+
+        elmAddButton = ttk.Button(
+            self.tab, 
+            text="Generate Problems",
+            command=self.generateElmAdditionProblems
+        )
+        elmAddButton.pack(side="top", fill="x", padx=10, pady=10)
+
+
+    def generateElmAdditionProblems(self):
         problems = []
         for i in range(0, 20):
-            problem = utils.math_problems.additionProblem(elmAddValue1.get(), elmAddValue2.get())
+            problem = utils.math_problems.additionProblem(self.firstNumber.get(), self.secondNumber.get())
             problems.append(problem)
         
         showSolution = True
         html=web.generator.problemsHtml(problems, showSolution)
         css=web.resources.problemsCssFile()
         utils.pdf.create(html, css, 'problems.pdf')
-
-    elmAddButton = ttk.Button(
-        tab, 
-        text="Generate Problems",
-        command=generateElmAdditionProblems
-    )
-    elmAddButton.pack(side="top", fill="x", padx=10, pady=10)
 

@@ -41,7 +41,7 @@ elmDivTab = ttk.Frame(elmTabControl)
 elmTabControl.add(elmDivTab, text ='Division')
 
 # Elementary Addition Tab
-gui.elementary.addition.gui(elmAddTab)
+gui.elementary.addition.Gui(elmAddTab)
 
 
 ## Various Problems Tab
