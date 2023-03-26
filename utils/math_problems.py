@@ -33,8 +33,6 @@ class subtractionProblem():
         if randomPosition:
             self.a, self.b = general.randomPosition(self.a, self.b)
 
-        print(allowNegative, randomPosition, self.a, self.b)
-
     
     def getSolution(self):
         return self.a - self.b
