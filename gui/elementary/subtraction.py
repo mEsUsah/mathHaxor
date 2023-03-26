@@ -72,6 +72,9 @@ class Tab():
         )
         createButton.pack(side="top", fill="x", padx=10, pady=10)
 
+        self.limitCiphers()
+        
+
     def limitCiphers(self):
         if not self.allowNegative.get():
             for radio in self.optionTwoRadios:
@@ -96,9 +99,10 @@ class Tab():
         
         problems = []
         for i in range(0, 20):
-            problem = utils.math_problems.additionProblem(
+            problem = utils.math_problems.subtractionProblem(
                 self.firstNumber.get(), 
-                self.secondNumber.get()
+                self.secondNumber.get(),
+                allowNegative=self.allowNegative.get()
             )
             problems.append(problem)
         
