@@ -1,6 +1,9 @@
 import random
 
-def generateNumber(siphers):
+def generateNumber(siphers, maxNumber=None):
+    if maxNumber:
+        return random.randint(10**(siphers-1), maxNumber)
+
     return random.randint(10**(siphers-1), (10**(siphers))-1)
 
 def randomPosition(a, b):
