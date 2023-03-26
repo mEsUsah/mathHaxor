@@ -63,8 +63,6 @@ class multiplicationProblemWithTables(mathProblem):
 
         if randomOrder:
             self.a, self.b = general.randomPosition(self.a, self.b)
-        
-        print(self.a, self.b)
     
     def getSolution(self):
         return self.a * self.b
@@ -89,7 +87,6 @@ class divisionProblem:
         else:
             self.a = general.generateNumber(a)
             self.b = general.generateNumber(b)
-        
 
     def getSolution(self):
         if self.difficulty == 0:
@@ -99,3 +96,18 @@ class divisionProblem:
 
     def getProblem(self):
         return f"{self.a} / {self.b}"
+
+
+class divisionProblemmWithTables(mathProblem):
+    def __init__(self, tables:list):
+        # Divident / Divisor = Quotient
+        self.divisor = random.choice(tables)
+        self.quotient = random.randint(1, 10)
+        self.divident = self.divisor * self.quotient
+    
+    def getSolution(self):
+        return self.quotient
+
+    def getProblem(self):
+        return f"{self.divident} / {self.divisor}"
+        
