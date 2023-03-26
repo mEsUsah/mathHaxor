@@ -4,18 +4,26 @@
     <title>MathHaxor - Problems</title>
 </head>
 <body>
-    <h1>Problems</h1>
-    <p>Here are the problems</p>
-    <ul id="problem__list">
-    {% for problem in problems %}
-        <li>
-            {{ problem.getProblem() }}
-            {% if showAnswer %}
-                = {{ problem.getSolution() }}
-            {% endif %}
-        </li>
-    {% endfor %}
-    </ul>
-
+    <h1>MathHaxor</h1>
+    <section>
+        <div class="problem__lists">
+            <div style="display: inline-block; width: 300px;">
+                {% for problem in problems[:25] %}
+                    <p class="problem__item">{{ problem.getProblem() }} =</p>
+                {% endfor %}
+            </div>
+            <div style="display: inline-block; width: 300px; border-right: 1px solid black">
+                {% for problem in problems[25:50] %}
+                    <p class="problem__item">{{ problem.getProblem() }} =</p>
+                {% endfor %}
+            </div>
+            <div class="solution__list">
+                <h2>Solutions:</h1>
+                {% for problem in problems[:50] %}
+                    <p>{{ problem.getProblem() }} = {{ problem.getSolution() }}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
 </body>
 </html>

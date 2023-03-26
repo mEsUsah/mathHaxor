@@ -1,3 +1,16 @@
-ul{
-    color: red;
+.problem__lists{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+}
+.problem__item{
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.solution__list{
+    display: inline-block;
+    font-size: 8px;
+    line-height: 12px;
+    margin-left: 100px;
 }
