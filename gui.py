@@ -31,7 +31,7 @@ tab_2_content.pack(expand=1, fill="both")
 # Credits
 bottomFrame = ttk.Frame(window)
 bottomFrame.pack(side="bottom", fill="x")
-versionLabel = ttk.Label(bottomFrame, text="v0.8.0")
+versionLabel = ttk.Label(bottomFrame, text="v0.9.0")
 versionLabel.pack(side="right", fill="x", padx=10, pady=10)
 
 creditsLabel = ttk.Label(bottomFrame, text="Created by Stanley Skarshaug - www.haxor.no")
