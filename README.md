@@ -26,3 +26,23 @@ python3 gui.py
 ```bash
 python3 cli.py
 ```
+
+## Roadmap
+Features I want to implement are:
+
+### Binary Problem generator
+- Binary number reading
+- Binary addition
+- Binary subraction
+- Binary shift
+- Binary to ASCII
+- ASCII to binary
+
+### Trigonometry problem generator
+- Triangle angles
+- Square angles
+
+### PDF generator
+- Swith from HTML2PDF to proper user of pdfkit without the use of webkit
+- Logo, and credits on page
+- Default filename to include problem type and creation date.
