@@ -9,7 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Project naming convention
 - Credits, and version number in bottom of GUI window
 - Save as dialogue PDF creation
-- Subtraction problem generator
+- Elementary school subtraction problem to GUI.
 
 ### Fixes
 - Refactor icon
