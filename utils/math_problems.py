@@ -1,5 +1,6 @@
 # Imports
 from utils import general
+import random
 
 # Base class for math problems
 class mathProblem:
@@ -45,6 +46,25 @@ class subtractionProblem():
 class multiplicationProblem(mathProblem):
     def __init__(self, a, b):
         super().__init__(a, b)
+    
+    def getSolution(self):
+        return self.a * self.b
+
+    def getProblem(self):
+        return f"{self.a} * {self.b}"
+    
+
+class multiplicationProblemWithTables(mathProblem):
+    def __init__(self, tables:list, randomOrder=False):
+        self.tables = tables
+        self.randomOrder = randomOrder
+        self.a = random.choice(tables)
+        self.b = random.randint(1, 10)
+
+        if randomOrder:
+            self.a, self.b = general.randomPosition(self.a, self.b)
+        
+        print(self.a, self.b)
     
     def getSolution(self):
         return self.a * self.b

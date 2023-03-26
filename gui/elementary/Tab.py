@@ -32,3 +32,4 @@ class Tab():
         # Elementary Addition Tab
         gui.elementary.addition.Tab(elmAddTab)
         gui.elementary.subtraction.Tab(elmSubTab)
+        gui.elementary.multiplication.Tab(elmMultiTab)
