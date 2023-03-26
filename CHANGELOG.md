@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Update to a proper PDF format
 - Adjust number of problems generated
 
+### Fixes
+- Labels on elementary subraction
+- Hide unused placeholder top level tab
+
 ## [0.8.0] - 2023.03.26
 ### Added
 - Elementary school division problem to GUI.
