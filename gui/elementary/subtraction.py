@@ -98,7 +98,7 @@ class Tab():
             return # User canceled the save dialog
         
         problems = []
-        for i in range(0, 20):
+        for i in range(0, 50):
             problem = utils.math_problems.subtractionProblem(
                 self.firstNumber.get(), 
                 self.secondNumber.get(),

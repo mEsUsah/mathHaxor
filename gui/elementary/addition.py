@@ -55,7 +55,7 @@ class Tab():
             return # User canceled the save dialog
         
         problems = []
-        for i in range(0, 20):
+        for i in range(0, 50):
             problem = utils.math_problems.additionProblem(self.firstNumber.get(), self.secondNumber.get())
             problems.append(problem)
         

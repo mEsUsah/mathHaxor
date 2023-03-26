@@ -98,7 +98,7 @@ class Tab():
     def generateProblems(self):
         tables = self.getTables()
         problems = []
-        for i in range(0, 20):
+        for i in range(0, 50):
             problem = utils.math_problems.divisionProblemmWithTables(
                 tables,
             )
