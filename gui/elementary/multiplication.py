@@ -83,9 +83,7 @@ class Tab():
 
 
     def checkSelected(self):
-        print("Checking selected")
         for table in self.multiplicationTables:
-            print(table.get())
             if table.get():
                 self.createButton['state'] = "normal"
                 return
