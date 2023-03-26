@@ -20,7 +20,7 @@ class Tab():
         optionOne = ttk.Frame(optionsFrame)
         optionOne.pack(side="left", fill="both")
 
-        optionOneLabel = ttk.Label(optionOne,text="Ciphers in the first factor:")
+        optionOneLabel = ttk.Label(optionOne,text="Ciphers in first factor:")
         optionOneLabel.pack(side="top", fill="x", padx=10, pady=6)
 
         
@@ -38,7 +38,7 @@ class Tab():
         optionTwo = ttk.Frame(optionsFrame)
         optionTwo.pack(side="left", fill="both")
 
-        optionTwoLabel = ttk.Label(optionTwo,text="Ciphers in the second factor:")
+        optionTwoLabel = ttk.Label(optionTwo,text="Ciphers in second factor:")
         optionTwoLabel.pack(side="top", fill="x", padx=10, pady=6)
 
         for i in range(1, 5):
