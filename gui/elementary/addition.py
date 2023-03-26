@@ -16,7 +16,7 @@ class Tab():
         elmAddTabContent1 = ttk.Frame(elmAddProblemContainer)
         elmAddTabContent1.pack(side="left", fill="both")
 
-        elmAddLabel1 = ttk.Label(elmAddTabContent1,text="Ciphers in the first number:")
+        elmAddLabel1 = ttk.Label(elmAddTabContent1,text="Ciphers in first factor:")
         elmAddLabel1.pack(side="top", fill="x", padx=10, pady=6)
 
         for i in range(1, 5):
@@ -30,7 +30,7 @@ class Tab():
         elmAddTabContent2 = ttk.Frame(elmAddProblemContainer)
         elmAddTabContent2.pack(side="left", fill="both")
 
-        elmAddLabel2 = ttk.Label(elmAddTabContent2,text="Ciphers in the second number:")
+        elmAddLabel2 = ttk.Label(elmAddTabContent2,text="Ciphers in second factor:")
         elmAddLabel2.pack(side="top", fill="x", padx=10, pady=6)
 
         for i in range(1, 5):
