@@ -9,11 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Project naming convention
 - Credits, and version number in bottom of GUI window
 - Save as dialogue PDF creation
+- Subtraction problem generator
 
 ### Fixes
 - Refactor icon
 - Refactor elementary school addition tab into a class
 - Refactor elementary school tab into a class
+- Added option for maxNumber in number generator
 
 ## [0.5.0] - 2023.03.24
 ### Added
