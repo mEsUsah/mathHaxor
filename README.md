@@ -4,16 +4,27 @@ App to generate math problems
 * Run as a interractive terminal or GUI tool.
 * Can output to CLI or PDF
 
-## Prerequesites
+## Windows Prerequesites
 * Install [wkhtmltopdf](https://github.com/JazzCore/python-pdfkit/wiki/Installing-wkhtmltopdf) and add the bin directory to the PATH environement variable.
 * Python ^3.10
 
-## Installation Windows
+## Windows Installation
 ```cmd
-python -m venv venv
+python3 -m venv venv
 venv\Scripts\actiavate.bat
 pip install -r requriements.txt
 ```
+
+## Linux (Ubuntu 22) Installation
+```bash
+sudo apt install python3-tk
+sudo apt install wkhtmltopdf
+python3 -m venv venv
+chmod +x venv/bin/activate
+source venv/bin/activate
+pip install -r requirements.txt 
+```
+
 
 ## GUI tool
 To use the GUI tool run it from the terminal, of execute from the file by double clicking on it.
