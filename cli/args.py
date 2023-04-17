@@ -6,7 +6,7 @@ def init():
         epilog="Example: cli.py addition 1 1 -n 20 <-- \
                 Will generate 20 addition probles with 1 cipher numbers"
     )
-    
+
     parser.add_argument('action',
                         choices=['addition'],
                         help='Select problem type to generate')
@@ -27,10 +27,11 @@ def init():
     
     args = parser.parse_args()
 
-    for i in range(args.number):
-        number_1 = utils.general.generateNumber(args.c1)
-        number_2 = utils.general.generateNumber(args.c2)
-        
+    problems = []
+    for i in range(args.number):     
         if args.action == 'addition':
-            print(number_1, number_2)
+            problems.append(utils.math_problems.additionProblem(args.c1, args.c2))
+
+    for problem in problems:
+        print(problem.getProblem())
 
