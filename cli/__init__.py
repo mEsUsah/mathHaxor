@@ -1,4 +1,5 @@
-__all__ = ['input','output']
+__all__ = ['args', 'input','output']
 
+from .args import *
 from .input import *
 from .output import *
