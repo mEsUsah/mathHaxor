@@ -24,14 +24,22 @@ def init():
                         required=False,
                         default=1,
                         help='Number of problems to genereate')
-    
-    args = parser.parse_args()
 
+    parser.add_argument('-s', '--solution',
+                        action='store_true',
+                        help='Give solution in output')
+    
+
+    args = parser.parse_args()
+    
     problems = []
     for i in range(args.number):     
         if args.action == 'addition':
             problems.append(utils.math_problems.additionProblem(args.c1, args.c2))
 
     for problem in problems:
-        print(problem.getProblem())
+        if args.solution:
+            print(f'{problem.getProblem()} = {problem.getSolution()}')
+        else:
+            print(problem.getProblem())
 
