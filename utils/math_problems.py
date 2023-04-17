@@ -72,7 +72,7 @@ class multiplicationProblemWithTables(mathProblem):
 
 
 class divisionProblem:
-    def __init__(self, cipherA, cipherB, difficulty):
+    def __init__(self, cipherA, cipherB, difficulty=0):
         self.difficulty = difficulty
         
         if difficulty == 0:
@@ -85,8 +85,8 @@ class divisionProblem:
                     self.b = b
                     foundProblem = True
         else:
-            self.a = general.generateNumber(a)
-            self.b = general.generateNumber(b)
+            self.a = general.generateNumber(cipherA)
+            self.b = general.generateNumber(cipherB)
 
     def getSolution(self):
         if self.difficulty == 0:

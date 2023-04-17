@@ -8,7 +8,7 @@ def init():
     )
 
     parser.add_argument('action',
-                        choices=['add','sub','mult'],
+                        choices=['add','sub','mult','div'],
                         help='Select problem type to generate')
 
     parser.add_argument('c1',
@@ -36,10 +36,12 @@ def init():
     for i in range(args.number):     
         if args.action == 'add':
             problems.append(utils.math_problems.additionProblem(args.c1, args.c2))
-        if args.action == 'sub':
+        elif args.action == 'sub':
             problems.append(utils.math_problems.subtractionProblem(args.c1, args.c2))
-        if args.action == 'mult':
+        elif args.action == 'mult':
             problems.append(utils.math_problems.multiplicationProblem(args.c1, args.c2))
+        elif args.action == 'div':
+            problems.append(utils.math_problems.divisionProblem(args.c1, args.c2))
 
     for problem in problems:
         if args.solution:
