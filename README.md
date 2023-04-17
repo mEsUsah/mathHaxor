@@ -35,7 +35,19 @@ python3 gui.py
 
 ## Interactive terminal tool
 ```bash
-python3 cli.py
+python3 interactive.py
+```
+
+## CLI tool
+```bash
+python3 cli.py -h
+# Show help
+
+python3 cli.py add 2 2 -n 20 
+# Will output 20 addition problems WITHOUT solution
+
+python3 cli.py add 2 2 -sn 20 
+#Will output 20 additon problems WITH solution
 ```
 
 ## Roadmap
