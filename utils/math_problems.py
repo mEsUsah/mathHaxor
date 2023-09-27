@@ -29,7 +29,7 @@ class subtractionProblem():
         self.b = general.generateNumber(b)
         
         if not allowNegative and not randomPosition:
-            self.b = general.generateNumber(b, maxNumber=self.a + 1)
+            self.b = general.generateNumber(b, maxNumber=self.a)
 
         if randomPosition:
             self.a, self.b = general.randomPosition(self.a, self.b)

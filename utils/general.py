@@ -1,7 +1,7 @@
 import random
 
 def generateNumber(siphers, maxNumber=None):
-    if maxNumber:
+    if maxNumber and maxNumber <= (10**(siphers))-1:
         return random.randint(10**(siphers-1), maxNumber)
 
     return random.randint(10**(siphers-1), (10**(siphers))-1)
